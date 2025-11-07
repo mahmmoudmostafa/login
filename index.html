@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <title>Login App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
+      rel="stylesheet"/>
+    <!-- Bootstarp Stylesheet -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body id="home" class="d-flex justify-content-center align-items-center vh-100">
+    <section id="login" class="d-block py-5 w-100">
+      <div class="container-md d-flex justify-content-center">
+        <div class="content py-5 px-3 shadow-sm rounded-5">
+          <h1 class="formHeader text-center mb-5 fw-bold">Login</h1>
+          <div class="form">
+            <div class="form-floating mb-3">
+              <input
+                oninput="validateForm(this)"
+                type="email"
+                class="form-control"
+                id="signinEmail"
+                placeholder="name@example.com"
+              />
+              <span class="d-none text-danger">Write a valid email</span>
+              <span class="email-alert d-none text-danger"
+                >Email is not correct</span
+              >
+              <label for="signinEmail">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                oninput="validateForm(this)"
+                type="password"
+                class="form-control"
+                id="signinPassword"
+                placeholder="Password"
+              />
+              <span class="d-none text-danger">Write a valid password</span>
+              <span class="password-alert d-none text-danger"
+                >Password is not correct</span
+              >
+              <label for="signinPassword">Password</label>
+            </div>
+            <button
+              onclick="sayWelcomeToUser()"
+              type="submit"
+              id="submitBtn"
+              class="btn btn-primary w-100 my-3"
+            >
+              Login
+            </button>
+            <span class="required-alert d-none text-danger text-center"
+              >All fields required</span
+            >
+            <span class="signup-alert d-none text-danger text-center"
+              >You need to signup</span
+            >
+            <p class="messagePara text-center">
+              Don't have an account?
+              <a href="#" onclick="signupPage()"
+                >Signup</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="signup" class="d-none py-5 w-100">
+      <div class="container-md d-flex justify-content-center">
+        <div class="content py-5 px-3 shadow-sm rounded-5">
+          <h1 class="formHeader text-center mb-5 fw-bold">Signup</h1>
+          <div class="form">
+            <div class="form-floating signupInput mb-3">
+              <input
+                oninput="validateForm(this)"
+                type="text"
+                class="form-control"
+                id="signupName"
+                placeholder="Username"
+              />
+              <label for="signupName">Username</label>
+            </div>
+            <div class="form-floating signupInput mb-3">
+              <input
+                oninput="validateForm(this)"
+                type="email"
+                class="form-control"
+                id="signupEmail"
+                placeholder="name@example.com"
+              />
+              <label for="signupEmail">Email address</label>
+            </div>
+            <div class="form-floating signupInput mb-3">
+              <input
+                oninput="validateForm(this)"
+                type="password"
+                class="form-control"
+                id="signupPassword"
+                placeholder="Password"
+              />
+              <label for="signupPassword">Password</label>
+            </div>
+            <button
+              onclick="getUserData()"
+              type="submit"
+              id="submitBtn"
+              class="btn btn-primary w-100 my-3"
+            >
+              Signup
+            </button>
+            <span class="loginNow text-center text-danger d-none"
+              >You can login now
+            </span>
+            <span class="required-alert d-none text-danger text-center"
+              >All fields required</span
+            >
+            <p class="messagePara text-center">
+              Have an account?
+              <a href="./index.html">Login</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="toast">
+    </div>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+  </bodyid=>
+</html>

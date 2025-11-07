@@ -1,0 +1,42 @@
+body {
+  font-family: "Parkinsans", sans-serif;
+  background-color: #eee;
+}
+h1 {
+  color: #86b7fe;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+.content {
+  width: 75%;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .content {
+    width: 50%;
+  }
+}
+.wrapper {
+  background-color: #fff;
+}
+span {
+  padding-left: 0.75rem;
+}
+.form-control.is-valid:focus {
+  border-color: #86b7fe;
+  box-shadow: none;
+}
+.form-control.is-invalid:focus {
+  border-color: var(--bs-form-invalid-border-color);
+  box-shadow: none;
+}
+.toast {
+  width: 300px;
+  z-index: 10000;
+}
